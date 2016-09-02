@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rcfile=$1
+shift
+
+. $rcfile
+
+exec $@
