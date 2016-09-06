@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# first, drop all OS_ variables
+unset `env | grep OS_ | cut -f1 -d=`
+
 rcfile=$1
 shift
 
+# now load in desired variables
 . $rcfile
 
 exec $@
